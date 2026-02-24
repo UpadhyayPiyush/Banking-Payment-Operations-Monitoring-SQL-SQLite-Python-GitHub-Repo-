@@ -101,8 +101,8 @@ CREATE TABLE settlements (
 This section demonstrates how analytical findings were validated using statistical visualization (Python) and operational monitoring dashboards (Power BI).  
 The visuals below illustrate transaction behavior, operational workload, anomaly detection, and predictive monitoring.  
 
-![img1](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img1.png)  
 **Transaction Amount Distribution**  
+![img1](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img1.png)  
 
 **Purpose**:  
 This histogram visualizes the distribution of transaction values across 120,000+ transactions.  
@@ -110,6 +110,48 @@ This histogram visualizes the distribution of transaction values across 120,000+
 Most transactions fall within low-value ranges (< ₹40,000), while a long right tail represents rare high-value payments. Using statistical thresholds (Z-score > 3), approximately 2,227 transactions (~1.85%) were flagged as abnormal.  
 **Business Use**:  
 Most transactions fall within low-value ranges (< ₹40,000), while a long right tail represents rare high-value payments. Using statistical thresholds (Z-score > 3), approximately 2,227 transactions (~1.85%) were flagged as abnormal.  
+
+**Hourly Transaction Load Pattern** 
+![img2](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img2.png)
+
+**Purpose**: 
+Shows how transaction processing load varies across a 24-hour cycle.  
+**What it shows**:  
+Transaction volume peaks around 22:00 (10 PM) with more than 5,100 transactions/hour, indicating customer payment activity is concentrated in late evening hours.  
+**Business Use**:  
+Transaction volume peaks around 22:00 (10 PM) with more than 5,100 transactions/hour, indicating customer payment activity is concentrated in late evening hours.
+
+**Transaction Frequency Per Count**  
+![img3](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img3.png)  
+
+**Purpose**:  
+Detects abnormal user behavior based on number of transactions per account.  
+**What it shows**:  
+Most customers perform ~60–72 transactions, but statistical IQR analysis identified 6 high-frequency accounts significantly exceeding normal activity levels.  
+**Business Use**:  
+Supports detection of automated retries, bots, or suspicious transaction patterns contributing to system pressure.  
+
+**Transaction Volume Forecast**  
+![img4](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img4.png)  
+
+**Purpose**:  
+Predicts expected transaction workload using a 7-day moving average.  
+**What it shows**  
+Predicts expected transaction workload using a 7-day moving average.  
+**Business Use**  
+Allows proactive operational planning rather than reactive incident response.  
+
+**Page 1 — Payment Operations Health Monitoring**  
+![img5](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img5.png)  
+
+This page functions as a control panel for operations teams.  
+It tracks success rate, failure rate, settlement performance, and daily transaction workload to immediately assess system health and detect processing backlogs.  
+
+**Page 2 — Risk & Investigation Analysis**  
+![img6](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img6.png)  
+
+This investigation view helps analysts diagnose operational incidents.
+It highlights pending transactions, high-value exposure, abnormal accounts, and merchant patterns to identify root causes and prioritize operational action.  
 
 
 ## Key Insights 
