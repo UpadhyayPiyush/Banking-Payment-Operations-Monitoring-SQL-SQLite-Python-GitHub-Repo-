@@ -103,7 +103,6 @@ The visuals below illustrate transaction behavior, operational workload, anomaly
 
 **Transaction Amount Distribution**  
 ![img1](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img1.png)  
-
 **Purpose**:  
 This histogram visualizes the distribution of transaction values across 120,000+ transactions.  
 **What it shows**:  
@@ -113,7 +112,6 @@ Most transactions fall within low-value ranges (< ₹40,000), while a long right
 
 **Hourly Transaction Load Pattern** 
 ![img2](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img2.png)
-
 **Purpose**: 
 Shows how transaction processing load varies across a 24-hour cycle.  
 **What it shows**:  
@@ -123,7 +121,6 @@ Transaction volume peaks around 22:00 (10 PM) with more than 5,100 transactions/
 
 **Transaction Frequency Per Count**  
 ![img3](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img3.png)  
-
 **Purpose**:  
 Detects abnormal user behavior based on number of transactions per account.  
 **What it shows**:  
@@ -133,7 +130,6 @@ Supports detection of automated retries, bots, or suspicious transaction pattern
 
 **Transaction Volume Forecast**  
 ![img4](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img4.png)  
-
 **Purpose**:  
 Predicts expected transaction workload using a 7-day moving average.  
 **What it shows**  
@@ -143,13 +139,11 @@ Allows proactive operational planning rather than reactive incident response.
 
 **Page 1 — Payment Operations Health Monitoring**  
 ![img5](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img5.png)  
-
 This page functions as a control panel for operations teams.  
 It tracks success rate, failure rate, settlement performance, and daily transaction workload to immediately assess system health and detect processing backlogs.  
 
 **Page 2 — Risk & Investigation Analysis**  
 ![img6](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img6.png)  
-
 This investigation view helps analysts diagnose operational incidents.
 It highlights pending transactions, high-value exposure, abnormal accounts, and merchant patterns to identify root causes and prioritize operational action.  
 
