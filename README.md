@@ -27,7 +27,7 @@ The objective of this project was to design a payment operations monitoring fram
 ## Schema Structure 
 The relational database was designed using a multi-table banking structure.
 
-`sql
+```sql
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     name VARCHAR(100),
@@ -73,4 +73,49 @@ CREATE TABLE settlements (
     settlement_status VARCHAR(20),
     delay_hours INT,
     FOREIGN KEY (transaction_id) REFERENCES transactions(transaction_id)
-);`
+);
+```
+
+## Tools & Technologies 
+- **MySQL**: relational database & data storage
+- **SQL**: KPI creation, aggregations, and operational analysis
+- **Python (Pandas, NumPy, Seaborn, Matplotlib)**: statistical analysis & anomaly detection
+- **Power BI**: interactive monitoring dashboard & reporting
+- **GitHub**: project documentation and version control
+- **MS Word**: report creation
+
+## Project Workflow 
+1) Data ingestion into MySQL relational database
+2) SQL queries used to validate data and create operational KPIs
+3) Root-cause analysis performed using grouped aggregations
+4) Python statistical analysis:
+   - Z-score detection (value anomalies)
+   - IQR detection (behavior anomalies)
+5) Identification of abnormal transaction behavior
+6) Power BI dashboard development:
+   - Page 1: Operations monitoring
+   - Page 2: Risk & investigation analysis
+7) Business insights and operational recommendations
+
+## Key Insights 
+- ~3% of transactions were pending, impacting 959 customers
+- Pending transactions represented approximately ₹7.18 crore financial exposure
+- Peak transaction load exceeded 5,100 transactions/hour at 22:00
+- 6 abnormal high-frequency accounts identified using statistical anomaly detection
+- Travel and e-commerce transactions contributed most to processing backlog
+- Some settlements exceeded 24-hour SLA, indicating operational delays
+
+## Recommendations 
+- Implement monitoring alerts when pending transaction rate exceeds threshold
+- Prioritize high-value pending transactions for manual review
+- Introduce retry cooldown for repeated payment attempts
+- Apply additional authentication after multiple failed login attempts
+- Monitor settlement delays to prevent reconciliation failures
+- Restrict high-value transactions for incomplete KYC profiles
+
+## Conclusion
+This project demonstrates how data analytics can move beyond reporting to operational decision support.  
+By combining SQL monitoring, statistical anomaly detection, and interactive dashboards, the system enables early identification of transaction backlogs, risky behavior, and settlement delays.  
+
+The solution highlights the value of analytics in banking operations — not only to measure performance, but to proactively detect and mitigate operational and compliance risks.
+
