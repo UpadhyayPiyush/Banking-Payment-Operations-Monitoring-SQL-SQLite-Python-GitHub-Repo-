@@ -97,6 +97,21 @@ CREATE TABLE settlements (
    - Page 2: Risk & investigation analysis
 7) Business insights and operational recommendations
 
+## Visual Analysis & Dashboard Walkthrough
+This section demonstrates how analytical findings were validated using statistical visualization (Python) and operational monitoring dashboards (Power BI).  
+The visuals below illustrate transaction behavior, operational workload, anomaly detection, and predictive monitoring.  
+
+![img1](https://github.com/UpadhyayPiyush/Banking-Payment-Operations-Monitoring-SQL-SQLite-Python-GitHub-Repo-/blob/main/Graphs/Img1.png)  
+**Transaction Amount Distribution**  
+
+**Purpose**:  
+This histogram visualizes the distribution of transaction values across 120,000+ transactions.  
+**What it shows**:  
+Most transactions fall within low-value ranges (< ₹40,000), while a long right tail represents rare high-value payments. Using statistical thresholds (Z-score > 3), approximately 2,227 transactions (~1.85%) were flagged as abnormal.  
+**Business Use**:  
+Most transactions fall within low-value ranges (< ₹40,000), while a long right tail represents rare high-value payments. Using statistical thresholds (Z-score > 3), approximately 2,227 transactions (~1.85%) were flagged as abnormal.  
+
+
 ## Key Insights 
 - ~3% of transactions were pending, impacting 959 customers
 - Pending transactions represented approximately ₹7.18 crore financial exposure
